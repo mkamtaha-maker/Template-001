@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أبيكس فلو | حلول رقمية وإدارية متكاملة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Cairo', 'sans-serif'] },
+          colors: { brand: { 50: '#eff6ff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">A</div>
+        <span class="text-xl font-bold text-slate-900 tracking-tight">أبيكس فلو</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#features" class="hover:text-brand-600 transition">المميزات</a>
+        <a href="#pricing" class="hover:text-brand-600 transition">الأسعار</a>
+        <a href="#contact" class="hover:text-brand-600 transition">تواصل معنا</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <!-- زر العودة للنسخة الإنجليزية -->
+        <a href="index.html" class="flex items-center gap-2 text-xs font-bold px-3 py-2 border border-slate-300 rounded-lg hover:bg-slate-100 transition text-slate-700">
+          <i class="fa-solid fa-globe text-brand-600"></i>
+          <span>English</span>
+        </a>
+        <a href="#pricing" class="hidden sm:inline-flex bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition">
+          ابدأ الآن
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50 text-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-wide uppercase text-brand-700 bg-brand-50 rounded-full border border-brand-200">
+        🚀 منصة متطورة لإدارة أعمالك
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 max-w-4xl mx-auto">
+        الحل المتكامل لرفع كفاءة أعمالك وزيادة أرباحك
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+        نساعدك في إدارة مهامك اليومية، تنظيم المبيعات، ومتابعة العملاء من خلال منصة واحدة بسيطة وقوية.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#pricing" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">
+          ابدأ تجربة مجانية لمدة 14 يوم
+        </a>
+        <a href="#features" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 font-semibold px-8 py-4 rounded-xl border border-slate-300 transition">
+          تعرف على المميزات
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">كل ما تحتاجه في مكان واحد</h2>
+        <p class="text-slate-600 text-lg">صممنا لك أدوات دقيقة ومرنة لتسهيل إنجاز مهامك اليومية بأعلى جودة.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">تقارير وتحليلات فورية</h3>
+          <p class="text-slate-600 leading-relaxed">احصل على رؤية واضحة ومباشرة لأداء مبيعاتك ونمو عملك مع لوحات قياس تفاعلية.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-bolt"></i></div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">أتمتة المهام الروتينية</h3>
+          <p class="text-slate-600 leading-relaxed">وفر وقت فريقك عبر جدولة المهام، إرسال الفواتير التلقائية، ومزامنة البيانات.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">أمان عالي وموثوقية</h3>
+          <p class="text-slate-600 leading-relaxed">تشفير متقدم لحماية بياناتك وبيانات عملائك مع نسخ احتياطي يومي ومستمر.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">خطط أسعار واضحة ومناسبة</h2>
+      <p class="text-slate-600 text-lg mb-16">اختر الخطة التي تناسب حجم نشاطك وابدأ على الفور.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto text-start">
+        <div class="bg-white p-8 rounded-2xl border border-slate-200">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">البداية</h3>
+          <p class="text-slate-500 text-sm mb-6">مثالية للأفراد والمشاريع الناشئة</p>
+          <div class="text-4xl font-extrabold text-slate-900 mb-6">$29 <span class="text-sm font-normal text-slate-500">/ شهرياً</span></div>
+          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition">اختيار الخطة</button>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border-2 border-brand-600 shadow-xl">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">المحترف</h3>
+          <p class="text-slate-500 text-sm mb-6">للشركات المتوسطة وفرق العمل</p>
+          <div class="text-4xl font-extrabold text-slate-900 mb-6">$79 <span class="text-sm font-normal text-slate-500">/ شهرياً</span></div>
+          <button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition shadow-md">اختيار الخطة</button>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-slate-200">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">الشركات الكبرى</h3>
+          <p class="text-slate-500 text-sm mb-6">حلول مخصصة وشاملة بالكامل</p>
+          <div class="text-4xl font-extrabold text-slate-900 mb-6">$149 <span class="text-sm font-normal text-slate-500">/ شهرياً</span></div>
+          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition">تواصل معنا</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <span class="text-lg font-bold text-white">أبيكس فلو</span>
+      <p class="text-sm">جميع الحقوق محفوظة © 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
