@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>اسم الخدمة أو التطبيق | حلول رقمية مبتكرة</title>
+  <title data-i18n="page_title">اسم الخدمة | حلول رقمية مبتكرة</title>
   
-  <!-- خط Cairo من Google Fonts -->
+  <!-- خطوط Google Fonts (Cairo للعربية و Inter للإنجليزية) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   
   <!-- مكتبة Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +17,8 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Cairo', 'sans-serif'],
+            ar: ['Cairo', 'sans-serif'],
+            en: ['Inter', 'sans-serif'],
           },
           colors: {
             brand: {
@@ -31,11 +32,9 @@
       }
     }
   </script>
-  
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+<body class="font-['Cairo'] text-slate-800 bg-slate-50 antialiased transition-all duration-300" id="body-root">
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
@@ -44,22 +43,22 @@
         <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">
           S
         </div>
-        <span class="text-xl font-bold text-slate-900 tracking-tight">اسم الخدمة</span>
+        <span class="text-xl font-bold text-slate-900 tracking-tight" data-i18n="brand_name">اسم الخدمة</span>
       </div>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <a href="#features" class="hover:text-brand-600 transition">المميزات</a>
-        <a href="#about" class="hover:text-brand-600 transition">عن الخدمة</a>
-        <a href="#pricing" class="hover:text-brand-600 transition">الأسعار</a>
-        <a href="#faq" class="hover:text-brand-600 transition">الأسئلة الشائعة</a>
+        <a href="#features" class="hover:text-brand-600 transition" data-i18n="nav_features">المميزات</a>
+        <a href="#pricing" class="hover:text-brand-600 transition" data-i18n="nav_pricing">الأسعار</a>
+        <a href="#contact" class="hover:text-brand-600 transition" data-i18n="nav_contact">تواصل معنا</a>
       </nav>
 
       <div class="flex items-center gap-4">
-        <!-- زر تبديل اللغة للتجربة السريعة -->
-        <button onclick="toggleLanguage()" class="text-xs font-semibold px-3 py-1.5 border border-slate-300 rounded-lg hover:bg-slate-100 transition">
-          <i class="fa-solid fa-globe me-1"></i> EN / AR
+        <!-- زر تبديل اللغة الفعلي -->
+        <button onclick="toggleLang()" class="flex items-center gap-2 text-xs font-bold px-3 py-2 border border-slate-300 rounded-lg hover:bg-slate-100 transition text-slate-700">
+          <i class="fa-solid fa-globe text-brand-600"></i>
+          <span id="lang-btn-text">English</span>
         </button>
-        <a href="#contact" class="hidden sm:inline-flex bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition">
+        <a href="#pricing" class="hidden sm:inline-flex bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition" data-i18n="cta_start">
           ابدأ الآن
         </a>
       </div>
@@ -67,23 +66,23 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-wide uppercase text-brand-700 bg-brand-50 rounded-full border border-brand-200">
+  <section class="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50 text-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-wide uppercase text-brand-700 bg-brand-50 rounded-full border border-brand-200" data-i18n="hero_badge">
         🚀 منصة متطورة لإدارة أعمالك
       </span>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 max-w-4xl mx-auto">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 max-w-4xl mx-auto" data-i18n="hero_title">
         الحل المتكامل لرفع كفاءة أعمالك وزيادة أرباحك
       </h1>
-      <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+      <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="hero_desc">
         نساعدك في إدارة مهامك اليومية، تنظيم المبيعات، ومتابعة العملاء من خلال منصة واحدة بسيطة وقوية.
       </p>
       
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#pricing" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-brand-500/25 transition">
+        <a href="#pricing" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition" data-i18n="hero_btn_primary">
           ابدأ تجربة مجانية لمدة 14 يوم
         </a>
-        <a href="#features" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 font-semibold px-8 py-4 rounded-xl border border-slate-300 transition">
+        <a href="#features" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 font-semibold px-8 py-4 rounded-xl border border-slate-300 transition" data-i18n="hero_btn_secondary">
           تعرف على المميزات
         </a>
       </div>
@@ -94,36 +93,33 @@
   <section id="features" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">كل ما تحتاجه في مكان واحد</h2>
-        <p class="text-slate-600 text-lg">صممنا لك أدوات دقيقة ومرنة لتسهيل إنجاز مهامك اليومية بأعلى جودة.</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4" data-i18n="features_title">كل ما تحتاجه في مكان واحد</h2>
+        <p class="text-slate-600 text-lg" data-i18n="features_subtitle">صممنا لك أدوات دقيقة ومرنة لتسهيل إنجاز مهامك اليومية بأعلى جودة.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition duration-300">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
           <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6">
             <i class="fa-solid fa-chart-line"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">تقارير وتحليلات فورية</h3>
-          <p class="text-slate-600 leading-relaxed">احصل على رؤية واضحة ومباشرة لأداء مبيعاتك ونمو عملك مع لوحات قياس تفاعلية.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="feat_1_title">تقارير وتحليلات فورية</h3>
+          <p class="text-slate-600 leading-relaxed" data-i18n="feat_1_desc">احصل على رؤية واضحة ومباشرة لأداء مبيعاتك ونمو عملك مع لوحات قياس تفاعلية.</p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition duration-300">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
           <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6">
             <i class="fa-solid fa-bolt"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">أتمتة المهام الروتينية</h3>
-          <p class="text-slate-600 leading-relaxed">وفر وقت فريقك عبر جدولة المهام، إرسال الفواتير التلقائية، ومزامنة البيانات.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="feat_2_title">أتمتة المهام الروتينية</h3>
+          <p class="text-slate-600 leading-relaxed" data-i18n="feat_2_desc">وفر وقت فريقك عبر جدولة المهام، إرسال الفواتير التلقائية، ومزامنة البيانات.</p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition duration-300">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
           <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6">
             <i class="fa-solid fa-shield-halved"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">أمان عالي وموثوقية</h3>
-          <p class="text-slate-600 leading-relaxed">تشفير متقدم لحماية بياناتك وبيانات عملائك مع نسخ احتياطي يومي ومستمر.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="feat_3_title">أمان عالي وموثوقية</h3>
+          <p class="text-slate-600 leading-relaxed" data-i18n="feat_3_desc">تشفير متقدم لحماية بياناتك وبيانات عملائك مع نسخ احتياطي يومي ومستمر.</p>
         </div>
       </div>
     </div>
@@ -131,85 +127,137 @@
 
   <!-- Pricing Section -->
   <section id="pricing" class="py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">خطط أسعار واضحة ومناسبة</h2>
-        <p class="text-slate-600 text-lg">اختر الخطة التي تناسب حجم نشاطك وابدأ على الفور.</p>
-      </div>
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4" data-i18n="pricing_title">خطط أسعار واضحة ومناسبة</h2>
+      <p class="text-slate-600 text-lg mb-16" data-i18n="pricing_subtitle">اختر الخطة التي تناسب حجم نشاطك وابدأ على الفور.</p>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <!-- Basic Plan -->
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
-          <div>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">البداية</h3>
-            <p class="text-slate-500 text-sm mb-6">مثالية للأفراد والمشاريع الناشئة</p>
-            <div class="text-4xl font-extrabold text-slate-900 mb-6">$29 <span class="text-sm font-normal text-slate-500">/ شهرياً</span></div>
-            <ul class="space-y-4 text-sm text-slate-600 mb-8">
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> حتى 3 مستخدمين</li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> تقارير أساسية</li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> دعم فني عبر البريد</li>
-            </ul>
-          </div>
-          <a href="#" class="w-full text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition">اختيار الخطة</a>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto text-start">
+        <div class="bg-white p-8 rounded-2xl border border-slate-200">
+          <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="plan_1_name">البداية</h3>
+          <div class="text-4xl font-extrabold text-slate-900 mb-6">$29 <span class="text-sm font-normal text-slate-500" data-i18n="per_month">/ شهرياً</span></div>
+          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition" data-i18n="choose_plan">اختيار الخطة</button>
         </div>
 
-        <!-- Pro Plan (Featured) -->
-        <div class="bg-white p-8 rounded-2xl border-2 border-brand-600 shadow-xl relative flex flex-col justify-between">
-          <span class="absolute -top-3 start-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">الأكثر طلباً</span>
-          <div>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">المحترف</h3>
-            <p class="text-slate-500 text-sm mb-6">للشركات المتوسطة وفرق العمل</p>
-            <div class="text-4xl font-extrabold text-slate-900 mb-6">$79 <span class="text-sm font-normal text-slate-500">/ شهرياً</span></div>
-            <ul class="space-y-4 text-sm text-slate-600 mb-8">
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> عدد مستخدمين غير محدود</li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> تقارير متقدمة ومباشرة</li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> أتمتة كاملة للمهام</li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> دعم فني مخصص على مدار الساعة</li>
-            </ul>
-          </div>
-          <a href="#" class="w-full text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition shadow-md">اختيار الخطة</a>
+        <div class="bg-white p-8 rounded-2xl border-2 border-brand-600 shadow-xl">
+          <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="plan_2_name">المحترف</h3>
+          <div class="text-4xl font-extrabold text-slate-900 mb-6">$79 <span class="text-sm font-normal text-slate-500" data-i18n="per_month">/ شهرياً</span></div>
+          <button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition shadow-md" data-i18n="choose_plan">اختيار الخطة</button>
         </div>
 
-        <!-- Enterprise Plan -->
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
-          <div>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">الشركات الكبرى</h3>
-            <p class="text-slate-500 text-sm mb-6">حلول مخصصة وشاملة</p>
-            <div class="text-4xl font-extrabold text-slate-900 mb-6">$149 <span class="text-sm font-normal text-slate-500">/ شهرياً</span></div>
-            <ul class="space-y-4 text-sm text-slate-600 mb-8">
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> تخصيص كامل للنظام</li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> تكامل مع الأنظمة الداخلية</li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> مدير حساب مالي خاص</li>
-            </ul>
-          </div>
-          <a href="#" class="w-full text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition">تواصل معنا</a>
+        <div class="bg-white p-8 rounded-2xl border border-slate-200">
+          <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="plan_3_name">الشركات الكبرى</h3>
+          <div class="text-4xl font-extrabold text-slate-900 mb-6">$149 <span class="text-sm font-normal text-slate-500" data-i18n="per_month">/ شهرياً</span></div>
+          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition" data-i18n="contact_us">تواصل معنا</button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-base">S</div>
-        <span class="text-lg font-bold text-white">اسم الخدمة</span>
-      </div>
-      <p class="text-sm">جميع الحقوق محفوظة © 2026</p>
+      <span class="text-lg font-bold text-white" data-i18n="brand_name">اسم الخدمة</span>
+      <p class="text-sm" data-i18n="footer_rights">جميع الحقوق محفوظة © 2026</p>
     </div>
   </footer>
 
-  <!-- Script بسيط لتجربة تبديل الاتجاه واللغة -->
+  <!-- Translation Dictionary & Switcher Script -->
   <script>
-    function toggleLanguage() {
+    const translations = {
+      ar: {
+        page_title: "اسم الخدمة | حلول رقمية مبتكرة",
+        brand_name: "اسم الخدمة",
+        nav_features: "المميزات",
+        nav_pricing: "الأسعار",
+        nav_contact: "تواصل معنا",
+        cta_start: "ابدأ الآن",
+        hero_badge: "🚀 منصة متطورة لإدارة أعمالك",
+        hero_title: "الحل المتكامل لرفع كفاءة أعمالك وزيادة أرباحك",
+        hero_desc: "نساعدك في إدارة مهامك اليومية، تنظيم المبيعات، ومتابعة العملاء من خلال منصة واحدة بسيطة وقوية.",
+        hero_btn_primary: "ابدأ تجربة مجانية لمدة 14 يوم",
+        hero_btn_secondary: "تعرف على المميزات",
+        features_title: "كل ما تحتاجه في مكان واحد",
+        features_subtitle: "صممنا لك أدوات دقيقة ومرنة لتسهيل إنجاز مهامك اليومية بأعلى جودة.",
+        feat_1_title: "تقارير وتحليلات فورية",
+        feat_1_desc: "احصل على رؤية واضحة ومباشرة لأداء مبيعاتك ونمو عملك مع لوحات قياس تفاعلية.",
+        feat_2_title: "أتمتة المهام الروتينية",
+        feat_2_desc: "وفر وقت فريقك عبر جدولة المهام، إرسال الفواتير التلقائية، ومزامنة البيانات.",
+        feat_3_title: "أمان عالي وموثوقية",
+        feat_3_desc: "تشفير متقدم لحماية بياناتك وبيانات عملائك مع نسخ احتياطي يومي ومستمر.",
+        pricing_title: "خطط أسعار واضحة ومناسبة",
+        pricing_subtitle: "اختر الخطة التي تناسب حجم نشاطك وابدأ على الفور.",
+        plan_1_name: "البداية",
+        plan_2_name: "المحترف",
+        plan_3_name: "الشركات الكبرى",
+        per_month: "/ شهرياً",
+        choose_plan: "اختيار الخطة",
+        contact_us: "تواصل معنا",
+        footer_rights: "جميع الحقوق محفوظة © 2026",
+        lang_btn: "English"
+      },
+      en: {
+        page_title: "Service Name | Innovative Digital Solutions",
+        brand_name: "ServiceName",
+        nav_features: "Features",
+        nav_pricing: "Pricing",
+        nav_contact: "Contact Us",
+        cta_start: "Get Started",
+        hero_badge: "🚀 Next-Gen Business Management Platform",
+        hero_title: "The All-in-One Solution to Scale Your Business",
+        hero_desc: "Streamline daily operations, manage sales, and track customer relationships seamlessly from a single powerful platform.",
+        hero_btn_primary: "Start 14-Day Free Trial",
+        hero_btn_secondary: "Explore Features",
+        features_title: "Everything You Need in One Place",
+        features_subtitle: "Designed with flexible, precise tools to elevate your business efficiency.",
+        feat_1_title: "Real-Time Analytics",
+        feat_1_desc: "Gain instant visibility into your sales performance and growth trends with interactive dashboards.",
+        feat_2_title: "Workflow Automation",
+        feat_2_desc: "Save hours by scheduling repetitive tasks, auto-invoicing, and syncing data effortlessly.",
+        feat_3_title: "High Security & Uptime",
+        feat_3_desc: "Enterprise-grade encryption and daily backups ensure your critical data is always safe.",
+        pricing_title: "Simple & Transparent Pricing",
+        pricing_subtitle: "Choose the perfect plan tailored to your business scale.",
+        plan_1_name: "Starter",
+        plan_2_name: "Professional",
+        plan_3_name: "Enterprise",
+        per_month: "/ month",
+        choose_plan: "Select Plan",
+        contact_us: "Contact Sales",
+        footer_rights: "All rights reserved © 2026",
+        lang_btn: "العربية"
+      }
+    };
+
+    let currentLang = 'ar';
+
+    function toggleLang() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      
       const html = document.documentElement;
-      if (html.getAttribute('dir') === 'rtl') {
+      const body = document.getElementById('body-root');
+      const langBtnText = document.getElementById('lang-btn-text');
+
+      // 1. تغيير الاتجاه واللغة والخط
+      if (currentLang === 'en') {
         html.setAttribute('dir', 'ltr');
         html.setAttribute('lang', 'en');
+        body.className = body.className.replace("font-['Cairo']", "font-['Inter']");
       } else {
         html.setAttribute('dir', 'rtl');
         html.setAttribute('lang', 'ar');
+        body.className = body.className.replace("font-['Inter']", "font-['Cairo']");
       }
+
+      // 2. تحديث نص زر التبديل
+      langBtnText.innerText = translations[currentLang].lang_btn;
+
+      // 3. تبديل كافة النصوص في الصفحة
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          element.innerText = translations[currentLang][key];
+        }
+      });
     }
   </script>
 </body>
