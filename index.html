@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="page_title">اسم الخدمة | حلول رقمية مبتكرة</title>
+  <title data-i18n="page_title">ApexFlow | Modern SaaS & Digital Solutions</title>
   
-  <!-- خطوط Google Fonts (Cairo للعربية و Inter للإنجليزية) -->
+  <!-- Fonts: Inter for English, Cairo for Arabic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- مكتبة Tailwind CSS -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            ar: ['Cairo', 'sans-serif'],
-            en: ['Inter', 'sans-serif'],
-          },
           colors: {
             brand: {
               50: '#eff6ff',
@@ -34,32 +30,32 @@
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body class="font-['Cairo'] text-slate-800 bg-slate-50 antialiased transition-all duration-300" id="body-root">
+<body class="font-['Inter'] text-slate-800 bg-slate-50 antialiased transition-all duration-200" id="body-root">
 
-  <!-- Header / Navigation -->
+  <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">
-          S
+          A
         </div>
-        <span class="text-xl font-bold text-slate-900 tracking-tight" data-i18n="brand_name">اسم الخدمة</span>
+        <span class="text-xl font-bold text-slate-900 tracking-tight" data-i18n="brand_name">ApexFlow</span>
       </div>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <a href="#features" class="hover:text-brand-600 transition" data-i18n="nav_features">المميزات</a>
-        <a href="#pricing" class="hover:text-brand-600 transition" data-i18n="nav_pricing">الأسعار</a>
-        <a href="#contact" class="hover:text-brand-600 transition" data-i18n="nav_contact">تواصل معنا</a>
+        <a href="#features" class="hover:text-brand-600 transition" data-i18n="nav_features">Features</a>
+        <a href="#pricing" class="hover:text-brand-600 transition" data-i18n="nav_pricing">Pricing</a>
+        <a href="#contact" class="hover:text-brand-600 transition" data-i18n="nav_contact">Contact</a>
       </nav>
 
       <div class="flex items-center gap-4">
-        <!-- زر تبديل اللغة الفعلي -->
+        <!-- Language Switcher Button -->
         <button onclick="toggleLang()" class="flex items-center gap-2 text-xs font-bold px-3 py-2 border border-slate-300 rounded-lg hover:bg-slate-100 transition text-slate-700">
           <i class="fa-solid fa-globe text-brand-600"></i>
-          <span id="lang-btn-text">English</span>
+          <span id="lang-btn-text">العربية</span>
         </button>
         <a href="#pricing" class="hidden sm:inline-flex bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition" data-i18n="cta_start">
-          ابدأ الآن
+          Get Started
         </a>
       </div>
     </div>
@@ -69,21 +65,21 @@
   <section class="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50 text-center">
     <div class="max-w-7xl mx-auto px-6">
       <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-wide uppercase text-brand-700 bg-brand-50 rounded-full border border-brand-200" data-i18n="hero_badge">
-        🚀 منصة متطورة لإدارة أعمالك
+        🚀 Next-Gen Business Management Platform
       </span>
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 max-w-4xl mx-auto" data-i18n="hero_title">
-        الحل المتكامل لرفع كفاءة أعمالك وزيادة أرباحك
+        The All-in-One Solution to Scale Your Business
       </h1>
       <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="hero_desc">
-        نساعدك في إدارة مهامك اليومية، تنظيم المبيعات، ومتابعة العملاء من خلال منصة واحدة بسيطة وقوية.
+        Streamline daily operations, manage sales, and track customer relationships seamlessly from a single powerful platform.
       </p>
       
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#pricing" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition" data-i18n="hero_btn_primary">
-          ابدأ تجربة مجانية لمدة 14 يوم
+          Start 14-Day Free Trial
         </a>
         <a href="#features" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 font-semibold px-8 py-4 rounded-xl border border-slate-300 transition" data-i18n="hero_btn_secondary">
-          تعرف على المميزات
+          Explore Features
         </a>
       </div>
     </div>
@@ -93,8 +89,8 @@
   <section id="features" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4" data-i18n="features_title">كل ما تحتاجه في مكان واحد</h2>
-        <p class="text-slate-600 text-lg" data-i18n="features_subtitle">صممنا لك أدوات دقيقة ومرنة لتسهيل إنجاز مهامك اليومية بأعلى جودة.</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4" data-i18n="features_title">Everything You Need in One Place</h2>
+        <p class="text-slate-600 text-lg" data-i18n="features_subtitle">Designed with flexible, precise tools to elevate your business efficiency.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
@@ -102,24 +98,24 @@
           <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6">
             <i class="fa-solid fa-chart-line"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="feat_1_title">تقارير وتحليلات فورية</h3>
-          <p class="text-slate-600 leading-relaxed" data-i18n="feat_1_desc">احصل على رؤية واضحة ومباشرة لأداء مبيعاتك ونمو عملك مع لوحات قياس تفاعلية.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="feat_1_title">Real-Time Analytics</h3>
+          <p class="text-slate-600 leading-relaxed" data-i18n="feat_1_desc">Gain instant visibility into your sales performance and growth trends with interactive dashboards.</p>
         </div>
 
         <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
           <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6">
             <i class="fa-solid fa-bolt"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="feat_2_title">أتمتة المهام الروتينية</h3>
-          <p class="text-slate-600 leading-relaxed" data-i18n="feat_2_desc">وفر وقت فريقك عبر جدولة المهام، إرسال الفواتير التلقائية، ومزامنة البيانات.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="feat_2_title">Workflow Automation</h3>
+          <p class="text-slate-600 leading-relaxed" data-i18n="feat_2_desc">Save hours by scheduling repetitive tasks, auto-invoicing, and syncing data effortlessly.</p>
         </div>
 
         <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
           <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6">
             <i class="fa-solid fa-shield-halved"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="feat_3_title">أمان عالي وموثوقية</h3>
-          <p class="text-slate-600 leading-relaxed" data-i18n="feat_3_desc">تشفير متقدم لحماية بياناتك وبيانات عملائك مع نسخ احتياطي يومي ومستمر.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="feat_3_title">Enterprise Security</h3>
+          <p class="text-slate-600 leading-relaxed" data-i18n="feat_3_desc">Enterprise-grade encryption and daily backups ensure your critical data is always safe.</p>
         </div>
       </div>
     </div>
@@ -128,45 +124,81 @@
   <!-- Pricing Section -->
   <section id="pricing" class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4" data-i18n="pricing_title">خطط أسعار واضحة ومناسبة</h2>
-      <p class="text-slate-600 text-lg mb-16" data-i18n="pricing_subtitle">اختر الخطة التي تناسب حجم نشاطك وابدأ على الفور.</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4" data-i18n="pricing_title">Simple & Transparent Pricing</h2>
+      <p class="text-slate-600 text-lg mb-16" data-i18n="pricing_subtitle">Choose the perfect plan tailored to your business scale.</p>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto text-start">
         <div class="bg-white p-8 rounded-2xl border border-slate-200">
-          <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="plan_1_name">البداية</h3>
-          <div class="text-4xl font-extrabold text-slate-900 mb-6">$29 <span class="text-sm font-normal text-slate-500" data-i18n="per_month">/ شهرياً</span></div>
-          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition" data-i18n="choose_plan">اختيار الخطة</button>
+          <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="plan_1_name">Starter</h3>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="plan_1_desc">Ideal for individuals and early startups</p>
+          <div class="text-4xl font-extrabold text-slate-900 mb-6">$29 <span class="text-sm font-normal text-slate-500" data-i18n="per_month">/ month</span></div>
+          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition" data-i18n="choose_plan">Select Plan</button>
         </div>
 
         <div class="bg-white p-8 rounded-2xl border-2 border-brand-600 shadow-xl">
-          <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="plan_2_name">المحترف</h3>
-          <div class="text-4xl font-extrabold text-slate-900 mb-6">$79 <span class="text-sm font-normal text-slate-500" data-i18n="per_month">/ شهرياً</span></div>
-          <button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition shadow-md" data-i18n="choose_plan">اختيار الخطة</button>
+          <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="plan_2_name">Professional</h3>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="plan_2_desc">For scaling teams and companies</p>
+          <div class="text-4xl font-extrabold text-slate-900 mb-6">$79 <span class="text-sm font-normal text-slate-500" data-i18n="per_month">/ month</span></div>
+          <button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition shadow-md" data-i18n="choose_plan">Select Plan</button>
         </div>
 
         <div class="bg-white p-8 rounded-2xl border border-slate-200">
-          <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="plan_3_name">الشركات الكبرى</h3>
-          <div class="text-4xl font-extrabold text-slate-900 mb-6">$149 <span class="text-sm font-normal text-slate-500" data-i18n="per_month">/ شهرياً</span></div>
-          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition" data-i18n="contact_us">تواصل معنا</button>
+          <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="plan_3_name">Enterprise</h3>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="plan_3_desc">Full custom setup and dedicated tools</p>
+          <div class="text-4xl font-extrabold text-slate-900 mb-6">$149 <span class="text-sm font-normal text-slate-500" data-i18n="per_month">/ month</span></div>
+          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 rounded-xl transition" data-i18n="contact_us">Contact Sales</button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+  <footer id="contact" class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <span class="text-lg font-bold text-white" data-i18n="brand_name">اسم الخدمة</span>
-      <p class="text-sm" data-i18n="footer_rights">جميع الحقوق محفوظة © 2026</p>
+      <span class="text-lg font-bold text-white" data-i18n="brand_name">ApexFlow</span>
+      <p class="text-sm" data-i18n="footer_rights">All rights reserved © 2026</p>
     </div>
   </footer>
 
-  <!-- Translation Dictionary & Switcher Script -->
   <script>
     const translations = {
+      en: {
+        page_title: "ApexFlow | Modern SaaS & Digital Solutions",
+        brand_name: "ApexFlow",
+        nav_features: "Features",
+        nav_pricing: "Pricing",
+        nav_contact: "Contact",
+        cta_start: "Get Started",
+        hero_badge: "🚀 Next-Gen Business Management Platform",
+        hero_title: "The All-in-One Solution to Scale Your Business",
+        hero_desc: "Streamline daily operations, manage sales, and track customer relationships seamlessly from a single powerful platform.",
+        hero_btn_primary: "Start 14-Day Free Trial",
+        hero_btn_secondary: "Explore Features",
+        features_title: "Everything You Need in One Place",
+        features_subtitle: "Designed with flexible, precise tools to elevate your business efficiency.",
+        feat_1_title: "Real-Time Analytics",
+        feat_1_desc: "Gain instant visibility into your sales performance and growth trends with interactive dashboards.",
+        feat_2_title: "Workflow Automation",
+        feat_2_desc: "Save hours by scheduling repetitive tasks, auto-invoicing, and syncing data effortlessly.",
+        feat_3_title: "Enterprise Security",
+        feat_3_desc: "Enterprise-grade encryption and daily backups ensure your critical data is always safe.",
+        pricing_title: "Simple & Transparent Pricing",
+        pricing_subtitle: "Choose the perfect plan tailored to your business scale.",
+        plan_1_name: "Starter",
+        plan_1_desc: "Ideal for individuals and early startups",
+        plan_2_name: "Professional",
+        plan_2_desc: "For scaling teams and companies",
+        plan_3_name: "Enterprise",
+        plan_3_desc: "Full custom setup and dedicated tools",
+        per_month: "/ month",
+        choose_plan: "Select Plan",
+        contact_us: "Contact Sales",
+        footer_rights: "All rights reserved © 2026",
+        lang_btn: "العربية"
+      },
       ar: {
-        page_title: "اسم الخدمة | حلول رقمية مبتكرة",
-        brand_name: "اسم الخدمة",
+        page_title: "أبيكس فلو | حلول رقمية وإدارية متكاملة",
+        brand_name: "أبيكس فلو",
         nav_features: "المميزات",
         nav_pricing: "الأسعار",
         nav_contact: "تواصل معنا",
@@ -187,75 +219,44 @@
         pricing_title: "خطط أسعار واضحة ومناسبة",
         pricing_subtitle: "اختر الخطة التي تناسب حجم نشاطك وابدأ على الفور.",
         plan_1_name: "البداية",
+        plan_1_desc: "مثالية للأفراد والمشاريع الناشئة",
         plan_2_name: "المحترف",
+        plan_2_desc: "للشركات المتوسطة وفرق العمل",
         plan_3_name: "الشركات الكبرى",
+        plan_3_desc: "حلول مخصصة وشاملة بالكامل",
         per_month: "/ شهرياً",
         choose_plan: "اختيار الخطة",
         contact_us: "تواصل معنا",
         footer_rights: "جميع الحقوق محفوظة © 2026",
         lang_btn: "English"
-      },
-      en: {
-        page_title: "Service Name | Innovative Digital Solutions",
-        brand_name: "ServiceName",
-        nav_features: "Features",
-        nav_pricing: "Pricing",
-        nav_contact: "Contact Us",
-        cta_start: "Get Started",
-        hero_badge: "🚀 Next-Gen Business Management Platform",
-        hero_title: "The All-in-One Solution to Scale Your Business",
-        hero_desc: "Streamline daily operations, manage sales, and track customer relationships seamlessly from a single powerful platform.",
-        hero_btn_primary: "Start 14-Day Free Trial",
-        hero_btn_secondary: "Explore Features",
-        features_title: "Everything You Need in One Place",
-        features_subtitle: "Designed with flexible, precise tools to elevate your business efficiency.",
-        feat_1_title: "Real-Time Analytics",
-        feat_1_desc: "Gain instant visibility into your sales performance and growth trends with interactive dashboards.",
-        feat_2_title: "Workflow Automation",
-        feat_2_desc: "Save hours by scheduling repetitive tasks, auto-invoicing, and syncing data effortlessly.",
-        feat_3_title: "High Security & Uptime",
-        feat_3_desc: "Enterprise-grade encryption and daily backups ensure your critical data is always safe.",
-        pricing_title: "Simple & Transparent Pricing",
-        pricing_subtitle: "Choose the perfect plan tailored to your business scale.",
-        plan_1_name: "Starter",
-        plan_2_name: "Professional",
-        plan_3_name: "Enterprise",
-        per_month: "/ month",
-        choose_plan: "Select Plan",
-        contact_us: "Contact Sales",
-        footer_rights: "All rights reserved © 2026",
-        lang_btn: "العربية"
       }
     };
 
-    let currentLang = 'ar';
+    let currentLang = 'en';
 
     function toggleLang() {
-      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      currentLang = currentLang === 'en' ? 'ar' : 'en';
       
       const html = document.documentElement;
       const body = document.getElementById('body-root');
       const langBtnText = document.getElementById('lang-btn-text');
 
-      // 1. تغيير الاتجاه واللغة والخط
-      if (currentLang === 'en') {
-        html.setAttribute('dir', 'ltr');
-        html.setAttribute('lang', 'en');
-        body.className = body.className.replace("font-['Cairo']", "font-['Inter']");
-      } else {
+      if (currentLang === 'ar') {
         html.setAttribute('dir', 'rtl');
         html.setAttribute('lang', 'ar');
         body.className = body.className.replace("font-['Inter']", "font-['Cairo']");
+      } else {
+        html.setAttribute('dir', 'ltr');
+        html.setAttribute('lang', 'en');
+        body.className = body.className.replace("font-['Cairo']", "font-['Inter']");
       }
 
-      // 2. تحديث نص زر التبديل
       langBtnText.innerText = translations[currentLang].lang_btn;
 
-      // 3. تبديل كافة النصوص في الصفحة
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
-          element.innerText = translations[currentLang][key];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang] && translations[currentLang][key]) {
+          el.innerText = translations[currentLang][key];
         }
       });
     }
