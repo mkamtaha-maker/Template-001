@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ApexFlow | Modern SaaS & Digital Solutions</title>
+  <title id="page-title">Modern SaaS & Digital Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,8 +25,8 @@
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">A</div>
-        <span class="text-xl font-bold text-slate-900 tracking-tight">ApexFlow</span>
+        <div id="brand-letter" class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">A</div>
+        <span id="nav-brand-name" class="text-xl font-bold text-slate-900 tracking-tight">ApexFlow</span>
       </div>
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
         <a href="#features" class="hover:text-brand-600 transition">Features</a>
@@ -34,12 +34,11 @@
         <a href="#contact" class="hover:text-brand-600 transition">Contact</a>
       </nav>
       <div class="flex items-center gap-4">
-        <!-- رابط مباشر للنسخة العربية -->
         <a href="ar.html" class="flex items-center gap-2 text-xs font-bold px-3 py-2 border border-slate-300 rounded-lg hover:bg-slate-100 transition text-slate-700">
           <i class="fa-solid fa-globe text-brand-600"></i>
           <span>العربية</span>
         </a>
-        <a href="#pricing" class="hidden sm:inline-flex bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition">
+        <a id="nav-cta-btn" href="#pricing" class="hidden sm:inline-flex bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition">
           Get Started
         </a>
       </div>
@@ -48,17 +47,17 @@
 
   <section class="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50 text-center">
     <div class="max-w-7xl mx-auto px-6">
-      <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-wide uppercase text-brand-700 bg-brand-50 rounded-full border border-brand-200">
+      <span id="hero-badge" class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-wide uppercase text-brand-700 bg-brand-50 rounded-full border border-brand-200">
         🚀 Next-Gen Business Management Platform
       </span>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 max-w-4xl mx-auto">
+      <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 max-w-4xl mx-auto">
         The All-in-One Solution to Scale Your Business
       </h1>
-      <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+      <p id="hero-subtitle" class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
         Streamline daily operations, manage sales, and track customer relationships seamlessly from a single powerful platform.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#pricing" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">
+        <a id="hero-cta-btn" href="#pricing" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">
           Start 14-Day Free Trial
         </a>
         <a href="#features" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 font-semibold px-8 py-4 rounded-xl border border-slate-300 transition">
@@ -71,10 +70,11 @@
   <section id="features" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Everything You Need in One Place</h2>
-        <p class="text-slate-600 text-lg">Designed with flexible, precise tools to elevate your business efficiency.</p>
+        <h2 id="features-title" class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Everything You Need in One Place</h2>
+        <p id="features-subtitle" class="text-slate-600 text-lg">Designed with flexible, precise tools to elevate your business efficiency.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div id="features-grid" class="grid md:grid-cols-3 gap-8">
+        <!-- Fallback cards -->
         <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
           <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-chart-line"></i></div>
           <h3 class="text-xl font-bold text-slate-900 mb-3">Real-Time Analytics</h3>
@@ -123,9 +123,81 @@
 
   <footer id="contact" class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <span class="text-lg font-bold text-white">ApexFlow</span>
-      <p class="text-sm">All rights reserved © 2026</p>
+      <div>
+        <span id="footer-brand-name" class="text-lg font-bold text-white block">ApexFlow</span>
+        <span id="footer-contact" class="text-xs text-slate-400">contact@apexflow.com</span>
+      </div>
+      <p id="footer-copyright" class="text-sm">All rights reserved © 2026</p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch('./data.json?v=' + Date.now())
+        .then(res => {
+          if (!res.ok) throw new Error("data.json not found");
+          return res.json();
+        })
+        .then(data => {
+          if (data.business_name) {
+            document.title = `${data.business_name} | Modern Digital Solutions`;
+            const navName = document.getElementById('nav-brand-name');
+            if (navName) navName.innerText = data.business_name;
+            const ftName = document.getElementById('footer-brand-name');
+            if (ftName) ftName.innerText = data.business_name;
+            const bLetter = document.getElementById('brand-letter');
+            if (bLetter) bLetter.innerText = data.business_name.trim().charAt(0).toUpperCase();
+          }
+
+          if (data.hero) {
+            if (data.hero.title) document.getElementById('hero-title').innerText = data.hero.title;
+            if (data.hero.subtitle) document.getElementById('hero-subtitle').innerText = data.hero.subtitle;
+            if (data.hero.cta_button) {
+              const heroBtn = document.getElementById('hero-cta-btn');
+              if (heroBtn) heroBtn.innerText = data.hero.cta_button;
+            }
+          }
+
+          if (data.about?.description) {
+            const sub = document.getElementById('features-subtitle');
+            if (sub) sub.innerText = data.about.description;
+          }
+
+          if (Array.isArray(data.services) && data.services.length > 0) {
+            const grid = document.getElementById('features-grid');
+            if (grid) {
+              grid.innerHTML = '';
+              const icons = ['fa-chart-line', 'fa-bolt', 'fa-shield-halved', 'fa-cloud', 'fa-layer-group', 'fa-code'];
+              data.services.forEach((s, idx) => {
+                const icon = icons[idx % icons.length];
+                const card = document.createElement('div');
+                card.className = "p-8 rounded-2xl bg-slate-50 border border-slate-200 transition hover:shadow-md";
+                card.innerHTML = `
+                  <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                    <i class="fa-solid ${icon}"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-slate-900 mb-3">${s.title || 'Feature'}</h3>
+                  <p class="text-slate-600 leading-relaxed">${s.description || ''}</p>
+                `;
+                grid.appendChild(card);
+              });
+            }
+          }
+
+          if (data.contact) {
+            const ftContact = document.getElementById('footer-contact');
+            if (ftContact && data.contact.email) {
+              ftContact.innerText = data.contact.email;
+            }
+          }
+
+          const copy = document.getElementById('footer-copyright');
+          if (copy && data.business_name) {
+            copy.innerText = `All rights reserved © ${new Date().getFullYear()} ${data.business_name}`;
+          }
+        })
+        .catch(err => console.warn("Using default template copy:", err));
+    });
+  </script>
 </body>
 </html>
